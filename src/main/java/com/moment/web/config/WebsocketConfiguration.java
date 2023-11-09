@@ -1,2 +1,4 @@
-package com.moment.web.config;public class WebsocketConfiguratioin {
+package com.moment.web.config;
+
+public class WebsocketConfiguration {
 }

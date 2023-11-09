@@ -1,0 +1,9 @@
+spring:
+    datasource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://chae-database.ctdnizanjl5z.ap-northeast-2.rds.amazonaws.com:3306/abb?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+        username: chae
+        password: chaechae01
+    jpa:
+        hibernate:
+            ddl-auto: create
