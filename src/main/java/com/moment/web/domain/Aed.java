@@ -1,4 +1,4 @@
-package com.moment.web;
+package com.moment.web.domain;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

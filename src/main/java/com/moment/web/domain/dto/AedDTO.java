@@ -1,5 +1,6 @@
-package com.moment.web;
+package com.moment.web.domain.dto;
 
+import com.moment.web.domain.Aed;
 import lombok.Data;
 
 @Data

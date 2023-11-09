@@ -1,10 +1,9 @@
-package com.moment.web.service;
+package com.moment.web.domain.service;
 
-import com.moment.web.Aed;
-import com.moment.web.AedDTO;
-import com.moment.web.AedRepository;
+import com.moment.web.domain.Aed;
+import com.moment.web.domain.dto.AedDTO;
+import com.moment.web.domain.AedRepository;
 import java.util.List;
-import java.util.stream.Collectors;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
