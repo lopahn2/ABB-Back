@@ -1,6 +1,5 @@
-package com.moment.web.domain.service;
+package com.moment.web.domain.kafka_service;
 
-import com.moment.web.domain.dto.AedDTO;
 import com.moment.web.config.KafkaProperties;
 import com.moment.web.domain.dto.AedMsgDTO;
 import lombok.RequiredArgsConstructor;
@@ -19,7 +18,7 @@ public class ConsumerService {
     @KafkaListener(topics = KafkaProperties.TOPIC, groupId = KafkaProperties.CONSUMER_GROUP)
     public void listen(ConsumerRecord<String, AedMsgDTO> record) {
         log.info("Received message : {}", record.value());
-        simpMessagingTemplate.convertAndSend("/topic/aed", record.value());
+        //simpMessagingTemplate.convertAndSend("/topic/aed", record.value());
     }
 
 }

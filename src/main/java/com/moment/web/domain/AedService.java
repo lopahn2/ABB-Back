@@ -1,4 +1,4 @@
-package com.moment.web.domain.service;
+package com.moment.web.domain;
 
 import com.moment.web.domain.Aed;
 import com.moment.web.domain.dto.AedDTO;

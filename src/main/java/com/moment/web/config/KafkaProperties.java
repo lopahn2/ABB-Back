@@ -10,6 +10,6 @@ public class KafkaProperties {
     public static final String CONSUMER_GROUP = "aed-consumer-group";
     public static final String TOPIC = "AED";
 
-    @Value("${kafka.bootstrap.servers}")
+    @Value("${spring.kafka.bootstrap-servers}")
     private String bootstrapServers;
 }

@@ -1,4 +1,4 @@
-package com.moment.web.domain.service;
+package com.moment.web.domain.kafka_service;
 
 import com.moment.web.domain.dto.AedMsgDTO;
 import com.moment.web.config.KafkaProperties;
