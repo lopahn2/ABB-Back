@@ -1,5 +1,8 @@
 package com.moment.web;
 
+import lombok.Data;
+
+@Data
 public class AedDTO {
     private Long id;
     private double locationX;

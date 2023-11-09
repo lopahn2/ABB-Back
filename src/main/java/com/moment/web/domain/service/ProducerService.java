@@ -1,6 +1,6 @@
-package com.moment.web.service;
+package com.moment.web.domain.service;
 
-import com.moment.web.AedDTO;
+import com.moment.web.domain.dto.AedMsgDTO;
 import com.moment.web.config.KafkaProperties;
 import java.util.concurrent.CompletableFuture;
 import lombok.RequiredArgsConstructor;
@@ -14,11 +14,12 @@ import org.springframework.stereotype.Service;
 public class ProducerService {
     private final KafkaTemplate<String, Object> kafkaTemplate;
 
-    public String sendMsg(AedDTO aedDTO) {
-        CompletableFuture<SendResult<String, Object>> completableFuture = kafkaTemplate.send(KafkaProperties.TOPIC, aedDTO);
+    public String sendMsg(AedMsgDTO aedMsgDTO) {
+        CompletableFuture<SendResult<String, Object>> completableFuture = kafkaTemplate.send(KafkaProperties.TOPIC,
+                aedMsgDTO);
         completableFuture.whenComplete((result, ex) -> {
             if (ex == null) {
-                log.info("Send mesage : {}", aedDTO.getId());
+                log.info("Send mesage : {}", aedMsgDTO.getId());
             } else {
                 log.info("Error Occured");
             }
