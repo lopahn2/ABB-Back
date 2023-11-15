@@ -13,7 +13,7 @@ public class WebsocketConfiguration implements WebSocketMessageBrokerConfigurer 
     @Override
     public void registerStompEndpoints(StompEndpointRegistry registry) {
         registry.addEndpoint("/aed-status")
-                .setAllowedOrigins("http://localhost:8080")
+                .setAllowedOrigins("http://localhost:3000")
                 .withSockJS();
     }
 

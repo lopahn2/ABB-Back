@@ -1,5 +1,6 @@
 package com.moment.web.domain;
 
+import com.moment.web.domain.dto.AedMsgDTO;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -20,7 +21,16 @@ public class Aed {
     private Long id;
     private boolean isWorked;
     private boolean isExist;
+    private String location;
+    private String address;
     private double locationX;
     private double locationY;
     private String lastCheckTime;
+
+    public Aed from(AedMsgDTO aedMsgDTO) {
+        this.isWorked = aedMsgDTO.isWorked();
+        this.isExist = aedMsgDTO.isExist();
+        this.lastCheckTime = aedMsgDTO.getLastCheckTime();
+        return this;
+    }
 }
